@@ -129,19 +129,93 @@ a:hover { text-decoration: underline; }
 }
 
 /* profile card */
-.profile-card{width:260px;background:var(--card);padding:18px;border-radius:12px;text-align:center;box-shadow:var(--shadow)}
-.avatar{width:140px;height:140px;border-radius:50%;object-fit:cover;border:4px solid #fff;margin-top:-70px;box-shadow:0 10px 30px rgba(10,20,40,0.08)}
-.profile-card h3{margin:12px 0 4px}
-.muted{color:var(--muted);font-size:14px}
-.block{display:block;width:100%;text-align:center;margin-top:12px}
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.project {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 28px rgba(13,27,54,0.08);
+  transition: 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(13,27,54,0.12);
+}
+
+.project h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  color: #07335a;
+}
+
+.project p {
+  margin: 6px 0;
+  color: #333;
+  font-size: 15px;
+}
+
+.project-links {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.project-links .link {
+  padding: 8px 12px;
+  background: #eaf4ff;
+  color: #0466d9;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.project-links .link:hover {
+  background: #d3e9ff;
+}
+
 
 /* sections */
 .section{padding:60px 18px}
 .section-title{font-size:28px;text-align:center;margin-bottom:30px;color:#0b2a66}
 
 /* skills */
-.skill-grid{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
-.skill{background:var(--card);padding:10px 14px;border-radius:999px;box-shadow:0 8px 20px rgba(13,27,54,0.03)}
+.skill-category {
+  background:#fff;
+  padding:20px;
+  border-radius:12px;
+  box-shadow:0 8px 24px rgba(13,27,54,0.06);
+  margin-bottom:20px;
+}
+
+.skill-category h3 {
+  margin-top:0;
+  margin-bottom:10px;
+  font-size:18px;
+  color:#07335a;
+}
+
+.skills-list {
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.skills-list span {
+  background:#eaf4ff;
+  padding:8px 12px;
+  border-radius:8px;
+  font-size:14px;
+  color:#0466d9;
+  font-weight:600;
+}
+
 
 /* projects */
 .project-grid {
@@ -193,4 +267,8 @@ a:hover { text-decoration: underline; }
   .hero { flex-direction:column-reverse; align-items:flex-start; }
   .project-grid{ grid-template-columns:1fr; gap:16px; }
 }
-
+@media (max-width: 700px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
