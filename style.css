@@ -8,12 +8,14 @@
   --container:1100px;
   --shadow: 0 8px 28px rgba(13,27,54,0.06);
 }
-@media (max-width:700px){
+@media (max-width:720px){
   .project-grid{ grid-template-columns:1fr; }
   .hero{ flex-direction:column-reverse; gap:18px; }
-  .profile-card{ width:100%; }
+  .profile-card{ width:100%; margin-bottom:12px; }
   .nav{ display:none; }
+  .nav.open{ position: static; }
 }
+
 
 *{box-sizing:border-box}
 
@@ -31,28 +33,25 @@ body { font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helv
 a { color: var(--accent-2); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-/* Project card polish */
+
+/* project card */
+/* Professional project card polish */
 .project-grid {
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:20px;
-  align-items:start;
 }
 .project {
-  background:var(--card);
+  background:#fff;
   padding:18px;
   border-radius:12px;
-  box-shadow:0 8px 24px rgba(13,27,54,0.06);
-  transition: transform .25s ease, box-shadow .25s ease;
+  box-shadow:0 10px 30px rgba(13,27,54,0.06);
+  transition:transform .28s ease,box-shadow .28s ease;
 }
-.project:hover {
-  transform: translateY(-6px);
-  box-shadow:0 20px 40px rgba(13,27,54,0.09);
-}
-.project h3{ margin:0 0 10px; font-size:18px; color:#07335a }
-.project p{ color:#334; line-height:1.5; font-size:15px; }
-.project-links { margin-top:12px; display:flex; gap:10px; flex-wrap:wrap; }
-.project .link { padding:8px 12px; border-radius:8px; background:#eaf4ff; color:#0466d9; text-decoration:none; font-weight:600; }
+.project:hover{ transform:translateY(-6px); box-shadow:0 22px 44px rgba(13,27,54,0.10); }
+.project h3{ margin:0 0 8px; font-size:18px; color:#07335a; }
+.project p{ color:#333; line-height:1.5; font-size:15px; }
+.project-links a{ padding:8px 12px; border-radius:8px; background:#eaf4ff; color:#0466d9; text-decoration:none; font-weight:600; }
 
 
 
