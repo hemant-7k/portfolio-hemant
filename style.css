@@ -8,10 +8,20 @@
   --container:1100px;
   --shadow: 0 8px 28px rgba(13,27,54,0.06);
 }
+@media (max-width:700px){
+  .project-grid{ grid-template-columns:1fr; }
+  .hero{ flex-direction:column-reverse; gap:18px; }
+  .profile-card{ width:100%; }
+  .nav{ display:none; }
+}
 
 *{box-sizing:border-box}
 
-body { font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+body { font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; line-height:1.6; }
+.container { max-width:1100px; padding:28px 20px; margin:0 auto; }
+.section { background:transparent; margin-bottom:18px; padding:36px 20px; border-radius:10px; }
+.section-title { font-size:26px; margin-bottom:18px; color:#0b2a66; text-align:center; }
+
 
 .container { max-width: 1100px; margin: 0 auto; padding: 28px 20px; }
 .hero { display:flex; gap:28px; align-items:center; padding:44px 20px; }
@@ -20,6 +30,30 @@ body { font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helv
 .avatar{width:140px;height:140px;border-radius:50%;object-fit:cover;margin-top:0;box-shadow:0 10px 30px rgba(10,20,40,0.08)}
 a { color: var(--accent-2); text-decoration: none; }
 a:hover { text-decoration: underline; }
+
+/* Project card polish */
+.project-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+  align-items:start;
+}
+.project {
+  background:var(--card);
+  padding:18px;
+  border-radius:12px;
+  box-shadow:0 8px 24px rgba(13,27,54,0.06);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.project:hover {
+  transform: translateY(-6px);
+  box-shadow:0 20px 40px rgba(13,27,54,0.09);
+}
+.project h3{ margin:0 0 10px; font-size:18px; color:#07335a }
+.project p{ color:#334; line-height:1.5; font-size:15px; }
+.project-links { margin-top:12px; display:flex; gap:10px; flex-wrap:wrap; }
+.project .link { padding:8px 12px; border-radius:8px; background:#eaf4ff; color:#0466d9; text-decoration:none; font-weight:600; }
+
 
 
 /* container max-width and padding for better layout */
