@@ -1,48 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hemant | Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hemant Koranga — Portfolio</title>
+  <meta name="description" content="Hemant Koranga — BCA Student | Frontend Developer (HTML, CSS) | Python learner | Creative-tech" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-    <header>
-        <h1>Hemant Koranga</h1>
-        <p>BCA Student | Frontend Developer</p>
-    </header>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand-wrap">
+        <a class="brand" href="/">Hemant Koranga</a>
+        <p class="sub">BCA Student • Frontend Developer • Python Learner</p>
+      </div>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            I am a BCA 5th-semester student focusing on frontend development and Python.
-            I enjoy building clean and responsive websites using HTML and CSS.
-        </p>
-    </section>
+      <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <nav id="mainNav" class="nav">
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a class="btn-outline" href="resume.pdf" download>Download Resume</a>
+      </nav>
+    </div>
+  </header>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>HTML5</li>
-            <li>CSS3</li>
-            <li>Python (Basics)</li>
-            <li>Problem Solving</li>
-            <li>Communication</li>
+  <main>
+    <section class="hero container">
+      <div class="hero-left">
+        <h1 class="hero-title">Hello — I’m <span class="accent">Hemant</span></h1>
+        <p class="hero-sub">I build clean & responsive web pages using <strong>HTML & CSS</strong>, learning <strong>Python</strong>, and exploring creative uses of AI. Open to internships & freelance projects.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="#projects">See Projects</a>
+          <a class="btn" href="https://www.linkedin.com/in/hemant-koranga-b6b46a283" target="_blank" rel="noopener">Connect on LinkedIn</a>
+        </div>
+        <ul class="micro-list">
+          <li>📁 3 Projects • <strong>Frontend + Python</strong></li>
+          <li>⏱️ Daily builder — small wins every day</li>
         </ul>
+      </div>
+
+      <aside class="hero-right profile-card">
+        <!-- using uploaded screenshot path as temporary image source -->
+        <img class="avatar" src="/mnt/data/Screenshot 2025-11-20 210656.png" alt="Hemant Koranga" />
+        <h3>Hemant Koranga</h3>
+        <p class="muted">BCA (5th Sem) • Frontend Dev</p>
+        <a class="btn-outline block" href="resume.pdf" download>Download Resume</a>
+        <a class="link-small" href="mailto:hemantkoranga200█@gmail.com">hemantkoranga200█@gmail.com</a>
+      </aside>
     </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li>Portfolio Website (HTML + CSS)</li>
-            <li>Python Mini App (Coming Soon)</li>
-        </ul>
+    <section id="about" class="container section about">
+      <h2 class="section-title">About Me</h2>
+      <p>I’m a BCA student focused on frontend development and practical projects. I build responsive interfaces and practice Python for problem solving. I learn by doing — weekly small projects and daily improvements.</p>
     </section>
 
-    <footer>
-        <p>© 2024 Hemant | All Rights Reserved</p>
-    </footer>
+    <section id="skills" class="container section">
+      <h2 class="section-title">Skills</h2>
+      <div class="skill-grid">
+        <div class="skill">HTML5 &amp; CSS3</div>
+        <div class="skill">Responsive Design</div>
+        <div class="skill">Basic JavaScript</div>
+        <div class="skill">Python (Basics)</div>
+        <div class="skill">Git &amp; GitHub</div>
+        <div class="skill">Notion &amp; Productivity</div>
+      </div>
+    </section>
 
+    <section id="projects" class="container section">
+      <h2 class="section-title">Projects</h2>
+      <div class="project-grid">
+        <article class="project">
+          <h3>Portfolio Website</h3>
+          <p>Professional portfolio built using HTML &amp; CSS and deployed on GitHub Pages.</p>
+          <p><strong>Tech:</strong> HTML, CSS, GitHub Pages</p>
+          <div class="project-links">
+            <a class="link" href="https://hemant-7k.github.io/portfolio-hemant/" target="_blank">View Live</a>
+            <a class="link" href="https://github.com/hemant-7k/portfolio-hemant" target="_blank">View Code</a>
+          </div>
+        </article>
+
+        <article class="project">
+          <h3>Python Mini App — Calculator</h3>
+          <p>CLI calculator to practice input handling, functions and logic in Python.</p>
+          <p><strong>Tech:</strong> Python</p>
+          <div class="project-links">
+            <a class="link" href="#" target="_blank">View Code</a>
+          </div>
+        </article>
+
+        <article class="project">
+          <h3>Video Editing Showreel</h3>
+          <p>Short edits & storytelling practice — exported as short reels for YouTube and social.</p>
+          <p><strong>Tools:</strong> CapCut, Canva</p>
+          <div class="project-links">
+            <a class="link" href="#" target="_blank">View Reel</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="container section contact">
+      <h2 class="section-title">Contact</h2>
+      <p>Want to work together or offer an internship? Email me at <a href="mailto:hemantkoranga200█@gmail.com">hemantkoranga200█@gmail.com</a> or connect on LinkedIn.</p>
+      <div class="contact-row">
+        <a class="btn primary" href="mailto:hemantkoranga200█@gmail.com">Email Me</a>
+        <a class="btn-outline" href="https://www.linkedin.com/in/hemant-koranga-b6b46a283" target="_blank">LinkedIn</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Hemant Koranga — Built with HTML &amp; CSS</p>
+    </div>
+  </footer>
+
+  <script>
+    // set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // simple nav toggle
+    const navToggle = document.getElementById('navToggle');
+    const mainNav = document.getElementById('mainNav');
+    navToggle.addEventListener('click', ()=> {
+      mainNav.classList.toggle('open');
+    });
+  </script>
 </body>
 </html>
